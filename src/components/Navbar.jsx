@@ -17,6 +17,9 @@ const Navbar = () => {
           <NavLink to="/newsletter" className="nav-link">
             Newsletter
           </NavLink>
+          <NavLink to="/random" className="nav-link">
+            Random
+          </NavLink>
         </div>
       </div>
     </Wrapper>

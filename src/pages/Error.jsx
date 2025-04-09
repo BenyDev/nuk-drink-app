@@ -10,7 +10,7 @@ const Error = () => {
     return (
       <Wrapper>
         <div>
-          <img src="img" alt="not found" />
+          <img src={img} alt="not found" />
           <h3>Ohh!</h3>
           <p>We can't find page you looking for</p>
         </div>

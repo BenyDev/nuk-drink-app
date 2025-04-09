@@ -8,10 +8,12 @@ import {
   Landing,
   Newsletter,
   SinglePageError,
+  RandCocktail,
 } from './pages'
 
 import { loader as landingLoader } from './pages/Landing'
 import { loader as singleCocktailLoader } from './pages/Cocktail'
+import { loader as randomCocktailLoader } from './pages/RandCocktail'
 import { action as newsletterAction } from './pages/Newsletter'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools'
@@ -50,6 +52,11 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />,
+      },
+      {
+        path: '/random',
+        loader: randomCocktailLoader(queryClient),
+        element: <RandCocktail />,
       },
     ],
   },
