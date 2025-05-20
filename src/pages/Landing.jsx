@@ -28,6 +28,7 @@ export const loader =
     await queryClient.ensureQueryData(searchCocktailsQuery(searchTerm))
     return { searchTerm }
   }
+
 const Landing = () => {
   const { searchTerm } = useLoaderData()
   const { data: drinks } = useQuery(searchCocktailsQuery(searchTerm))
